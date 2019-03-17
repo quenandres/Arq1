@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Sep 7, 2015 3:42:27 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="Hibernate.Estampado" table="estampado" catalog="estampados" optimistic-lock="version">
+        <id name="idestampado" type="java.lang.Integer">
+            <column name="idestampado" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="artista" class="Hibernate.Artista" fetch="select">
+            <column name="Artista_idArtista" not-null="true" />
+        </many-to-one>
+        <property name="nombre" type="string">
+            <column name="nombre" length="45" />
+        </property>
+        <property name="descripcion" type="string">
+            <column name="descripcion" length="45" />
+        </property>       
+        <property name="popularidad" type="java.lang.Integer">
+            <column name="popularidad" />
+        </property>
+        <property name="valor" type="java.lang.Integer">
+            <column name="valor" />
+        </property>
+        <set name="temas" table="estampado_has_tema" inverse="false" lazy="false" fetch="select">
+            <key>
+                <column name="Estampado_idestampado" not-null="true" />
+            </key>
+            <many-to-many entity-name="Hibernate.Tema">
+                <column name="Tema_idtema" not-null="true" />
+            </many-to-many>
+        </set>
+        <set name="compraHasEstampados" table="compra_has_estampado" inverse="true" lazy="false" fetch="select">
+            <key>
+                <column name="Estampado_idestampado" not-null="true" />
+            </key>
+            <one-to-many class="Hibernate.CompraHasEstampado" />
+        </set>
+        <set name="imagens" table="imagen" inverse="true" lazy="false" fetch="select">
+            <key>
+                <column name="Estampado_idestampado" not-null="true" />
+            </key>
+            <one-to-many class="Hibernate.Imagen" />
+        </set>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Sep 7, 2015 3:42:27 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="Hibernate.CompraHasEstampado" table="compra_has_estampado" catalog="estampados" optimistic-lock="version">
+        <composite-id name="id" class="Hibernate.CompraHasEstampadoId">
+            <key-property name="compraIdcompra" type="int">
+                <column name="Compra_idcompra" />
+            </key-property>
+            <key-property name="estampadoIdestampado" type="int">
+                <column name="Estampado_idestampado" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="compra" class="Hibernate.Compra" update="false" insert="false" fetch="select">
+            <column name="Compra_idcompra" not-null="true" />
+        </many-to-one>
+        <many-to-one name="estampado" class="Hibernate.Estampado" update="false" insert="false" fetch="select">
+            <column name="Estampado_idestampado" not-null="true" />
+        </many-to-one>
+        <property name="cantidad" type="java.lang.Integer">
+            <column name="cantidad" />
+        </property>
+         <property name="rating" type="java.lang.Integer">
+            <column name="rating"/>
+        </property>
+        <property name="tono" type="string">
+            <column name="tono" length="45" />
+        </property>
+        <property name="talla" type="string">
+            <column name="talla" length="45" />
+        </property>
+        <property name="estilo" type="string">
+            <column name="estilo" length="45" />
+        </property>
+        <property name="ubicacion" type="string">
+            <column name="ubicacion" length="45" />
+        </property>
+        <property name="texto" type="string">
+            <column name="texto" length="45" />
+        </property>
+    </class>
+</hibernate-mapping>

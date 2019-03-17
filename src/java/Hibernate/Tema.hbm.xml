@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Sep 7, 2015 3:42:27 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="Hibernate.Tema" table="tema" catalog="estampados" optimistic-lock="version">
+        <id name="idtema" type="java.lang.Integer">
+            <column name="idtema" />
+            <generator class="identity" />
+        </id>
+        <property name="nombre" type="string">
+            <column name="nombre" length="45" />
+        </property>
+        <set name="estampados" table="estampado_has_tema" inverse="false" lazy="false" fetch="select">
+            <key>
+                <column name="Tema_idtema" not-null="true" />
+            </key>
+            <many-to-many entity-name="Hibernate.Estampado">
+                <column name="Estampado_idestampado" not-null="true" />
+            </many-to-many>
+        </set>
+    </class>
+</hibernate-mapping>

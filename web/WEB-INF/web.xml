@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    
+    <servlet>
+        <servlet-name>Administrador</servlet-name>
+        <servlet-class>Servlets.Administrador_Servlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Artista</servlet-name>
+        <servlet-class>Servlets.Artista_Servlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Cliente</servlet-name>
+        <servlet-class>Servlets.Cliente_Servlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Administrador</servlet-name>
+        <url-pattern>/autenticar</url-pattern>
+        <url-pattern>/registrar</url-pattern>
+        <url-pattern>/login</url-pattern>
+        <url-pattern>/salir</url-pattern>
+        <url-pattern>/BackEnd/tematicas</url-pattern>
+        <url-pattern>/BackEnd/ventas</url-pattern>
+        <url-pattern>/BackEnd/tematicas/nuevo</url-pattern>
+        <url-pattern>/BackEnd/usuarios</url-pattern>
+        <url-pattern>/BackEnd/usuarios/nuevo</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Artista</servlet-name>
+        <url-pattern>/subir_image</url-pattern>
+        <url-pattern>/Artistas/estampados</url-pattern>
+        <url-pattern>/Artistas/estampados/nuevo</url-pattern>
+        <url-pattern>/Artistas/Perfil</url-pattern>
+        <url-pattern>/Artistas/cambios</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Cliente</servlet-name>
+        <url-pattern>/Catalogo</url-pattern>
+        <url-pattern>/Comprar</url-pattern>
+        <url-pattern>/Comprar/confirmar</url-pattern>
+        <url-pattern>/registrar/cambios</url-pattern>
+        <url-pattern>/Perfil</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+</web-app>
