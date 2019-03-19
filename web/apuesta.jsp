@@ -12,6 +12,9 @@
         <title>JSP Page</title>
     </head>
     <body>
+        
+        <%@ include file="menuadm.jsp" %>
+        
         <!--RF4: Crear y definir apuesta: asociar deporte, partido, marcador. --- admin y vendedor boletas 
                     Crear apuesta
                         asociar deporte
@@ -19,22 +22,23 @@
                         partido
                         marcador
                 -->
-        <table border="1">
+        <table class="table table-striped" style="width:50%;margin:auto;">
             <tr>
                 <td colspan="3"><b>Crear apuesta</b></td>
             </tr>
             <tr>
                 <th>Deporte</th>
                 <td colspan="2">
-                    <select name="deporteapuesta">
+                    <select class="form-control" name="deporteapuesta">
                         <option>Admin</option>
                         <option>Taquillero</option>
-                    </select>                </td>
+                    </select>    
+                </td>
             </tr>
             <tr>
                 <th>Asociar partido</th>
                 <td colspan="2">
-                    <select name="partidoapuesta">
+                    <select class="form-control" name="partidoapuesta">
                         <option>Admin</option>
                         <option>Taquillero</option>
                     </select>
@@ -43,10 +47,15 @@
             <tr>
                 <th>Marcador</th>
                 <td>
-                    <input type="number" min="0" max="300" value="0" name="marcador1">
+                    <input class="form-control" type="number" min="0" max="300" value="0" name="marcador1">
                 </td>
                 <td>
-                    <input type="number" min="0" max="300" value="0" name="marcador2">
+                    <input class="form-control" type="number" min="0" max="300" value="0" name="marcador2">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <input type="button" value="Guardar" style="display:block;margin:auto;" class="btn btn-primary">
                 </td>
             </tr>
         </table>

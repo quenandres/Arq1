@@ -12,6 +12,8 @@
         <title>JSP Page</title>
     </head>
     <body>
+         <%@ include file="menuadm.jsp" %>
+
         <!--RF5: Crear y definir Rifa: definir mÃ¡ximo de 
                     participantes, 
                     premios, 
@@ -31,32 +33,37 @@
                     modulo que tenga el rango de valores de los que se realiza el sorteo y definir numero aleatorios tanto los de la rifa.
 
                 -->
-        <table border="1">
+        <table class="table table-striped" style="width:50%;margin:auto;">
             <tr>
                 <td colspan="2"><b>Crear rifa</b></td>
             </tr>
             <tr>
                 <th>Participantes</th>
                 <td>
-                    <input type="number" min="0" max="100" value="0" name="participantesrifa">
+                    <input class="form-control" type="number" min="0" max="300" value="0" name="participantesrifa">
                 </td>
             </tr>
             <tr>
                 <th>Premios</th>
                 <td>
-                    <textarea name="premios"></textarea>
+                    <textarea class="form-control" name="premios"></textarea>
                 </td>
             </tr>
             <tr>
                 <th>Condiciones</th>
                 <td>
-                    <textarea name="condiciones"></textarea>
+                    <textarea class="form-control" name="condiciones"></textarea>
                 </td>
             </tr>
             <tr>
                 <th>Resultado</th>
                 <td>
-                    <textarea name="condiciones"></textarea>
+                    <textarea class="form-control" name="condiciones"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="button" value="Guardar" style="display:block;margin:auto;" class="btn btn-primary">
                 </td>
             </tr>
         </table>

@@ -12,52 +12,63 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <table border="1">
+        <%@ include file="menuadm.jsp" %>
+
+        <table class="table table-striped" style="width:28%;margin:15px;float:left;">
             <tr>
-                <td colspan="2"><b>Crear deporte</b></td>
+                <td colspan="3"><b>Crear deporte</b></td>
             </tr>
             <tr>
                 <th>Deporte</th>
                 <td>
-                    <input type="text" name="nombredeporte">
+                    <input type="text" class="form-control" name="nombredeporte">
+                </td>
+                <td>
+                    <input type="submit" value="Crear" class="btn btn-primary"> 
                 </td>
             </tr>
         </table>
         
-        <table border="1">
+        <table class="table table-striped" style="width:28%;margin:15px;float:left;">
             <tr>
-                <td colspan="2"><b>Crear equipo</b></td>
+                <td colspan="3"><b>Crear equipo</b></td>
             </tr>
             
              <tr>
                 <th>Deporte</th>
                 <td>
-                    <select name="deporteequipo"></select>
+                    <select class="form-control" name="deporteequipo"></select>
+                </td>
+                <td rowspan="2">
+                    <input type="submit" value="Crear equipo" class="btn btn-primary" > 
                 </td>
             </tr>
             <tr>
                 <th>Nombre equipo</th>
                 <td>
-                    <input type="text" name="nombreequipo">
+                    <input type="text" class="form-control" name="nombreequipo">
                 </td>
             </tr>
         </table>
         
-        <table border="1">
+        <table class="table table-striped" style="width:28%;margin:10px 0px;float:left;">
             <tr>
-                <td colspan="2"><b>Crear jugador</b></td>
+                <td colspan="3"><b>Crear jugador</b></td>
             </tr>
             
              <tr>
                 <th>Deporte</th>
                 <td>
-                    <select name="equipojugador"></select>
+                    <select class="form-control" name="equipojugador"></select>
+                </td>
+                <td rowspan="2">
+                   <input type="submit" value="Crear equipo" class="btn btn-primary"> 
                 </td>
             </tr>
             <tr>
                 <th>Nombre jugador</th>
                 <td>
-                    <input type="text" name="nombrejugador">
+                    <input type="text" class="form-control" name="nombrejugador">
                 </td>
             </tr>
         </table>

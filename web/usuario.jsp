@@ -12,25 +12,33 @@
         <title>JSP Page</title>
     </head>
     <body>
+
+        <%@ include file="menuadm.jsp" %>
+
        <!--RF3: Crear usuarios del sistema y definir perfil --- admin-->
 
-        <table border="1">
+        <table class="table table-striped" style="width:60%;margin:auto;">
             <tr>
                 <td colspan="2"><b>Crear usuario</b></td>
             </tr>
             <tr>
                 <th>Nombre usuario</th>
                 <td>
-                    <input type="text" name="nombreusuario">
+                    <input class="form-control" type="text" name="nombreusuario">
                 </td>
             </tr>
             <tr>
                 <th>Perfil de usuario</th>
                 <td>
-                    <select name="perfilusuario">
+                    <select class="form-control" name="perfilusuario">
                         <option>Admin</option>
                         <option>Taquillero</option>
                     </select>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="submit" value="Guardar" class="btn btn-primary" style="display:block;margin:auto;">
                 </td>
             </tr>
         </table>
