@@ -4,19 +4,24 @@
   <session-factory>
     <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
     <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
-    <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/Estampados?zeroDateTimeBehavior=convertToNull</property>
+    <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/ProyectoArq?zeroDateTimeBehavior=convertToNull</property>
     <property name="hibernate.connection.username">root</property>
-    <property name="hibernate.connection.password">123456</property>
+    <property name="hibernate.connection.password"></property>
     <property name="hibernate.show_sql">true</property>
     <property name="hibernate.current_session_context_class">thread</property>
     <property name="hibernate.query.factory_class">org.hibernate.hql.internal.classic.ClassicQueryTranslatorFactory</property>
-    <mapping resource="Hibernate/Estampado.hbm.xml"/>
-    <mapping resource="Hibernate/Tema.hbm.xml"/>
-    <mapping resource="Hibernate/Cliente.hbm.xml"/>
-    <mapping resource="Hibernate/Artista.hbm.xml"/>
-    <mapping resource="Hibernate/Compra.hbm.xml"/>
-    <mapping resource="Hibernate/CompraHasEstampado.hbm.xml"/>
-    <mapping resource="Hibernate/Usuario.hbm.xml"/>
-    <mapping resource="Hibernate/Imagen.hbm.xml"/>
+    
+        <mapping resource="Hibernate/Apostador.hbm.xml"/>
+        <mapping resource="Hibernate/Apuesta.hbm.xml"/>
+        <mapping resource="Hibernate/Boleteria.hbm.xml"/>
+        <mapping resource="Hibernate/Catalogo.hbm.xml"/>
+        <mapping resource="Hibernate/Deporte.hbm.xml"/>
+        <mapping resource="Hibernate/Equipo.hbm.xml"/>
+        <mapping resource="Hibernate/Jugadores.hbm.xml"/>
+        <mapping resource="Hibernate/Rifa.hbm.xml"/>
+        <mapping resource="Hibernate/Sorteo.hbm.xml"/> 
+        <mapping resource="Hibernate/Torneo.hbm.xml"/>   
+        <mapping resource="Hibernate/Usuarios.hbm.xml"/>
+        
   </session-factory>
 </hibernate-configuration>
