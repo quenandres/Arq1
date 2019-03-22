@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 21/03/2019 05:51:36 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="proyecto.model.Torneo" table="Torneo" catalog="ProyectArq1" optimistic-lock="version">
+        <id name="idTorneo" type="java.lang.Integer">
+            <column name="idTorneo" />
+            <generator class="identity" />
+        </id>
+        <property name="nombreTorneo" type="string">
+            <column name="nombreTorneo" />
+        </property>
+        <property name="idEquipo" type="string">
+            <column name="idEquipo" />
+        </property>
+        <property name="fechaInicio" type="date">
+            <column name="fechaInicio" length="10" />
+        </property>
+        <property name="fechaFin" type="date">
+            <column name="fechaFin" length="10" />
+        </property>
+        <property name="partidosTorneo" type="string">
+            <column name="partidosTorneo" length="45" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 21/03/2019 05:51:36 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="proyecto.model.Partido" table="Partido" catalog="ProyectArq1" optimistic-lock="version">
+        <id name="idPartido" type="java.lang.Integer">
+            <column name="idPartido" />
+            <generator class="identity" />
+        </id>
+        <property name="equipo1" type="java.lang.Integer">
+            <column name="equipo1" />
+        </property>
+        <property name="equipo2" type="java.lang.Integer">
+            <column name="equipo2" />
+        </property>
+        <property name="marcador" type="string">
+            <column name="marcador" length="45" />
+        </property>
+    </class>
+</hibernate-mapping>
