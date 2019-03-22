@@ -10,6 +10,14 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
+        
+         <script>
+            function guardaTorneo() {
+              alert("Torneo Guardado!");
+              documen.getElementById("form_torneo").reset();
+            }
+            
+        </script>
     </head>
     <body>
 
@@ -22,7 +30,7 @@
                     Fecha fin
 
                 -->
-    <form action="" method="">
+    <form id="form_torneo" method="post" action="TorneosServlet" >
         <table class="table table-striped" style="width:50%;margin:auto;">
             <tr>
                 <td style="text-align:left;" colspan="2"><b>Creacion de Torneos</b></td>
@@ -62,7 +70,7 @@
 
         <table class="table table-striped" style="width:80%;margin:auto;margin:auto;">
             <tr>
-                <td><input type="submit" value="Guardar" class="btn btn-primary" style="display:block;margin:auto;"></td>
+                <td><input type="submit" onclick="guardaTorneo();" value="Guardar" class="btn btn-primary" style="display:block;margin:auto;"></td>
                 <td><input type="reset" value="Cancelar" class="btn btn-primary" style="display:block;margin:auto;"></td>
             </tr>
         </table>

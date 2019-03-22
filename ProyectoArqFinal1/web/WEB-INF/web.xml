@@ -16,6 +16,26 @@
         <servlet-name>TorneoServlet</servlet-name>
         <servlet-class>proyecto.servlet.TorneoServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>TorneosServlet</servlet-name>
+        <servlet-class>proyecto.servlet.TorneosServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>UsuarioServlet</servlet-name>
+        <servlet-class>proyecto.servlet.UsuarioServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>UsuariosServlet</servlet-name>
+        <servlet-class>proyecto.servlet.UsuariosServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>RifaServlet</servlet-name>
+        <servlet-class>proyecto.servlet.RifaServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>BoleteriaServlet</servlet-name>
+        <servlet-class>proyecto.servlet.BoleteriaServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>DeporteServlet</servlet-name>
         <url-pattern>/DeporteServlet</url-pattern>
@@ -31,6 +51,26 @@
     <servlet-mapping>
         <servlet-name>TorneoServlet</servlet-name>
         <url-pattern>/TorneoServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>TorneosServlet</servlet-name>
+        <url-pattern>/TorneosServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UsuarioServlet</servlet-name>
+        <url-pattern>/UsuarioServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UsuariosServlet</servlet-name>
+        <url-pattern>/UsuariosServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RifaServlet</servlet-name>
+        <url-pattern>/RifaServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>BoleteriaServlet</servlet-name>
+        <url-pattern>/BoleteriaServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

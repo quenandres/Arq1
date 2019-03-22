@@ -10,6 +10,14 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
+        
+         <script>
+            function guardaTorneo() {
+              alert("Torneo Guardado!");
+              documen.getElementById("form_torneo").reset();
+            }
+            
+        </script>
     </head>
     <body>
 
@@ -22,36 +30,37 @@
                     Fecha fin
 
                 -->
-    <form action="" method="">
+    <form id="form_torneo" method="post" action="TorneosServlet" >
         <table class="table table-striped" style="width:50%;margin:auto;">
             <tr>
                 <td style="text-align:left;" colspan="2"><b>Creacion de Torneos</b></td>
             </tr>
             <tr>
-                <td>Descripcion Torneo</td>
+                <td>Nombre Torneo</td>
                 <td>
-                    <textarea class="form-control" name="descripciontorneo"></textarea>
+                    <textarea class="form-control" name="Nombre"></textarea>
                 </td>
             </tr>    
             <tr>
                 <td>Equipos participantes</td>
                 <td>
                     <!-- Equipos en seelct multiple -->
+                    <input type="text" name="EquipoParticipantes">
                     <select class="form-control"></select>
                 </td>
             </tr>
             <tr>
                 <td>Fecha inicio</td>
-                <td><input class="form-control" type="date" name="fecha_inicio"></td>
+                <td><input class="form-control" type="date" name="FechaInicio"></td>
             </tr>
             <tr>
                 <td>Fecha fin</td>
-                <td><input class="form-control" type="date" name="fecha_fin"></td>
+                <td><input class="form-control" type="date" name="FechaFin"></td>
             </tr>
             <tr>
                 <td>Torneo fase final</td>
                 <td>
-                    <select class="form-control" name="fase_final">
+                    <select class="form-control" name="TorneoFaseFinal">
                         <option value="si">Si</option>
                         <option value="no">No</option>
                     </select>
@@ -61,7 +70,7 @@
 
         <table class="table table-striped" style="width:80%;margin:auto;margin:auto;">
             <tr>
-                <td><input type="submit" value="Guardar" class="btn btn-primary" style="display:block;margin:auto;"></td>
+                <td><input type="submit" onclick="guardaTorneo();" value="Guardar" class="btn btn-primary" style="display:block;margin:auto;"></td>
                 <td><input type="reset" value="Cancelar" class="btn btn-primary" style="display:block;margin:auto;"></td>
             </tr>
         </table>

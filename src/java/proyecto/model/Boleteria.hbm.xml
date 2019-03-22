@@ -11,8 +11,8 @@
         <property name="maxBoletas" type="java.lang.Integer">
             <column name="maxBoletas" />
         </property>
-        <property name="precioBoleta" type="java.lang.Double">
-            <column name="precioBoleta" precision="22" scale="0" />
+        <property name="precioBoleta" type="string">
+            <column name="precioBoleta" length="255" />
         </property>
         <property name="tipoBoleta" type="string">
             <column name="tipoBoleta" length="45" />

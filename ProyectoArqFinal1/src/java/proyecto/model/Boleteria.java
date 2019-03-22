@@ -11,48 +11,50 @@ public class Boleteria  implements java.io.Serializable {
 
      private Integer idBoleteria;
      private Integer maxBoletas;
-     private Double precioBoleta;
+     private String precioBoleta;
      private String tipoBoleta;
 
     public Boleteria() {
     }
 
-    public Boleteria(Integer maxBoletas, Double precioBoleta, String tipoBoleta) {
-       this.maxBoletas = maxBoletas;
-       this.precioBoleta = precioBoleta;
-       this.tipoBoleta = tipoBoleta;
-    }
-   
-    public Integer getIdBoleteria() {
-        return this.idBoleteria;
-    }
-    
-    public void setIdBoleteria(Integer idBoleteria) {
+    public Boleteria(Integer idBoleteria, Integer maxBoletas, String precioBoleta, String tipoBoleta) {
         this.idBoleteria = idBoleteria;
-    }
-    public Integer getMaxBoletas() {
-        return this.maxBoletas;
-    }
-    
-    public void setMaxBoletas(Integer maxBoletas) {
         this.maxBoletas = maxBoletas;
-    }
-    public Double getPrecioBoleta() {
-        return this.precioBoleta;
-    }
-    
-    public void setPrecioBoleta(Double precioBoleta) {
         this.precioBoleta = precioBoleta;
-    }
-    public String getTipoBoleta() {
-        return this.tipoBoleta;
-    }
-    
-    public void setTipoBoleta(String tipoBoleta) {
         this.tipoBoleta = tipoBoleta;
     }
 
+    public Integer getIdBoleteria() {
+        return idBoleteria;
+    }
 
+    public void setIdBoleteria(Integer idBoleteria) {
+        this.idBoleteria = idBoleteria;
+    }
+
+    public Integer getMaxBoletas() {
+        return maxBoletas;
+    }
+
+    public void setMaxBoletas(Integer maxBoletas) {
+        this.maxBoletas = maxBoletas;
+    }
+
+    public String getPrecioBoleta() {
+        return precioBoleta;
+    }
+
+    public void setPrecioBoleta(String precioBoleta) {
+        this.precioBoleta = precioBoleta;
+    }
+
+    public String getTipoBoleta() {
+        return tipoBoleta;
+    }
+
+    public void setTipoBoleta(String tipoBoleta) {
+        this.tipoBoleta = tipoBoleta;
+    }
 
 
 }

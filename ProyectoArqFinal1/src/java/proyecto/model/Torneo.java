@@ -13,19 +13,20 @@ public class Torneo  implements java.io.Serializable {
      private Integer idTorneo;
      private String nombreTorneo;
      private String idEquipo;
-     private Date fechaInicio;
-     private Date fechaFin;
+     private String fechaInicio;
+     private String fechaFin;
      private String partidosTorneo;
 
     public Torneo() {
     }
 
-    public Torneo(String nombreTorneo, String idEquipo, Date fechaInicio, Date fechaFin, String partidosTorneo) {
-       this.nombreTorneo = nombreTorneo;
-       this.idEquipo = idEquipo;
-       this.fechaInicio = fechaInicio;
-       this.fechaFin = fechaFin;
-       this.partidosTorneo = partidosTorneo;
+    public Torneo(Integer idTorneo, String nombreTorneo, String idEquipo, String fechaInicio, String fechaFin, String partidosTorneo) {
+        this.idTorneo = idTorneo;
+        this.nombreTorneo = nombreTorneo;
+        this.idEquipo = idEquipo;
+        this.fechaInicio = fechaInicio;
+        this.fechaFin = fechaFin;
+        this.partidosTorneo = partidosTorneo;
     }
 
     public Integer getIdTorneo() {
@@ -52,19 +53,19 @@ public class Torneo  implements java.io.Serializable {
         this.idEquipo = idEquipo;
     }
 
-    public Date getFechaInicio() {
+    public String getFechaInicio() {
         return fechaInicio;
     }
 
-    public void setFechaInicio(Date fechaInicio) {
+    public void setFechaInicio(String fechaInicio) {
         this.fechaInicio = fechaInicio;
     }
 
-    public Date getFechaFin() {
+    public String getFechaFin() {
         return fechaFin;
     }
 
-    public void setFechaFin(Date fechaFin) {
+    public void setFechaFin(String fechaFin) {
         this.fechaFin = fechaFin;
     }
 
@@ -75,6 +76,8 @@ public class Torneo  implements java.io.Serializable {
     public void setPartidosTorneo(String partidosTorneo) {
         this.partidosTorneo = partidosTorneo;
     }
+
+    
    
    
 

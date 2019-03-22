@@ -76,7 +76,8 @@
         
             <td>
                 <a href="boleteria.jsp">Venta boleteria (RF6-RF8)</a>
-                <!--RF6: ConfiguraciÃ³n boleterÃ­a: Definir para un partido o rifa la cantidad mÃ¡xima de boletas y el precio individual o si hay variabilidad, especificar (por ejemplo, pueden haber 3 tipos de boletas: $10.000, $20.000 y $30.000).    --- admin y vendedor boletas
+                <!--
+                RF6: ConfiguraciÃ³n boleterÃ­a: Definir para un partido o rifa la cantidad mÃ¡xima de boletas y el precio individual o si hay variabilidad, especificar (por ejemplo, pueden haber 3 tipos de boletas: $10.000, $20.000 y $30.000).    --- admin y vendedor boletas
 
                 RF8: Venta boleterÃ­a Apuesta: asociar a un apostador un marcador para un partido especÃ­fico y un valor de apuesta. AdemÃ¡s, el sistema debe permitir la venta de boleterÃ­a hasta 5 minutos ANTES de que inicie el partido.    --- vendedor boletas
             

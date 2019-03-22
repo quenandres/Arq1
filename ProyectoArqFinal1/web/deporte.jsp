@@ -173,7 +173,7 @@
                     
                 </td>
                 <td rowspan="2">
-                   <input type="submit" onclick="guardaJugador();" value="Crear equipo" class="btn btn-primary"> 
+                   <input type="submit" onclick="guardaJugador();" value="Crear jugador" class="btn btn-primary"> 
                 </td>
             </tr>
             <tr>

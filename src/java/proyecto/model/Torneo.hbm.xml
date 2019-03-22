@@ -14,11 +14,11 @@
         <property name="idEquipo" type="string">
             <column name="idEquipo" />
         </property>
-        <property name="fechaInicio" type="date">
-            <column name="fechaInicio" length="10" />
+        <property name="fechaInicio" type="string">
+            <column name="fechaInicio" />
         </property>
-        <property name="fechaFin" type="date">
-            <column name="fechaFin" length="10" />
+        <property name="fechaFin" type="string">
+            <column name="fechaFin" />
         </property>
         <property name="partidosTorneo" type="string">
             <column name="partidosTorneo" length="45" />
